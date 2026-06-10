@@ -257,44 +257,44 @@
 
 | 来源（C-xx/T-xx） | SR 编号 | 实现位置（阶段4回填） | 测试用例 |
 |---|---|---|---|
-| C-01.1, T-17 | SR-01 | 待回填（password.py） | ST-01 |
-| C-01.2, T-03, T-09 | SR-07 | 待回填（tokens.py / service.py） | ST-07 |
-| C-01.3, T-09 | SR-13 | 待回填（audit.py sanitize） | ST-13 |
-| C-02, T-01 | SR-02 | 待回填（password.py policy） | ST-02 |
+| C-01.1, T-17 | SR-01 | auth_core/password.py:38,60 | ST-01 |
+| C-01.2, T-03, T-09 | SR-07 | auth_core/tokens.py:14, auth_core/service.py:110,418 | ST-07 |
+| C-01.3, T-09 | SR-13 | auth_core/audit.py:25,32 | ST-13 |
+| C-02, T-01 | SR-02 | auth_core/password.py:93 | ST-02 |
 | C-03, T-01, T-26 | SR-25 | 延期（下期 + 部署门禁，理由见 SR-25） | ST-25（部署验收） |
-| C-04.1, T-01, T-11 | SR-03 | 待回填（service.py login） | ST-03 |
-| C-04.2/3, T-01, T-03, T-10 | SR-04 | 待回填（ratelimit.py） | ST-04 |
-| C-04.4, T-07 | SR-05 | 待回填（service.py） | ST-05 |
+| C-04.1, T-01, T-11 | SR-03 | auth_core/service.py:184,202,302 | ST-03 |
+| C-04.2/3, T-01, T-03, T-10 | SR-04 | auth_core/ratelimit.py:21, auth_core/service.py:125 | ST-04 |
+| C-04.4, T-07 | SR-05 | auth_core/service.py:243,309,386, auth_core/password.py:64 | ST-05 |
 | C-04.2（CAPTCHA/WAF）, T-10, T-18 | SR-29 | 部署层 | ST-29（部署验收） |
 | C-05.1, T-02 | SR-24 | 部署层（集成层 Cookie） | ST-24（部署验收） |
-| C-05.2/3/4, T-02, T-09 | SR-06 | 待回填（tokens.py / service.py） | ST-06 |
-| C-05.2, T-18 | SR-22 | 待回填（storage.py / tasks） | ST-22 |
-| C-06, T-12 | SR-08 | 待回填（models.py 状态机 / service.py） | ST-08 |
-| C-06.4, C-07.1/2, T-28, T-31 | SR-21 | 待回填（service.py require_role） | ST-21 |
-| C-07.1, T-13 | SR-11 | 待回填（service.py） | ST-11 |
+| C-05.2/3/4, T-02, T-09 | SR-06 | auth_core/tokens.py:14, auth_core/service.py:135,159,344 | ST-06 |
+| C-05.2, T-18 | SR-22 | auth_core/storage.py:213,238, auth_core/service.py:159,648 | ST-22 |
+| C-06, T-12 | SR-08 | auth_core/models.py:37,46, auth_core/service.py:275,286,614 | ST-08 |
+| C-06.4, C-07.1/2, T-28, T-31 | SR-21 | auth_core/service.py:172,566 | ST-21 |
+| C-07.1, T-13 | SR-11 | auth_core/service.py:450,464 | ST-11 |
 | C-07.3, T-15, T-19, T-14 | SR-27 | 部署层 | ST-27（部署验收） |
 | C-07.4, T-26, T-28, T-29, T-30, T-31 | SR-37 | 部署层（管理后台下期） | ST-37（部署验收） |
 | C-08, T-05, T-21 | SR-23 | 部署层 | ST-23（部署验收） |
 | C-09.1/3, T-14, T-17 | SR-26 | 部署层 | ST-26（部署验收） |
-| C-09.2/4, T-17, T-29 | SR-14 | 待回填（masking.py） | ST-14 |
-| C-10.1/2/4, C-17.4, T-17 | SR-15 | 待回填（service.py / tasks） | ST-15 |
+| C-09.2/4, T-17, T-29 | SR-14 | auth_core/masking.py:10,15,24, auth_core/storage.py:128, auth_core/service.py:74 | ST-14 |
+| C-10.1/2/4, C-17.4, T-17 | SR-15 | auth_core/service.py:627 | ST-15 |
 | C-10.3, T-17 | SR-38 | 部署层 | ST-38（部署验收） |
-| C-11.1/3, T-06, T-22 | SR-13 | 待回填（audit.py） | ST-13 |
+| C-11.1/3, T-06, T-22 | SR-13 | auth_core/audit.py:46,57 | ST-13 |
 | C-11.2, T-16 | SR-28 | 部署层 | ST-28（部署验收） |
 | C-11.4, T-01, T-10, T-11, T-15 | SR-39 | 部署层 | ST-39（部署验收） |
 | C-12, T-04, T-08, T-14 | SR-34 | 部署层（CI/渗透） | ST-34（部署验收） |
 | C-13, T-27 | SR-35 | 部署层（流程/CI） | ST-35（部署验收） |
-| C-14.1/4, T-23, T-21, T-09 | SR-18 | 待回填（notify.py） | ST-18 |
+| C-14.1/4, T-23, T-21, T-09 | SR-18 | auth_core/notify.py:36,50, auth_core/service.py:84 | ST-18 |
 | C-14.2, T-25 | SR-32 | 部署层 | ST-32（部署验收） |
 | C-14.3, C-15.1/3, C-02.2, T-23 | SR-36 | 部署层/组织层 | ST-36（部署验收） |
-| C-15.2 | SR-16 | 待回填（service.py / storage.py） | ST-16 |
-| C-16.1 | SR-17 | 待回填（models.py） | ST-17 |
-| C-16.2, T-04 | SR-09 | 待回填（storage.py / validators） | ST-09 |
-| C-16.2, C-07.2, T-12 | SR-10 | 待回填（models.py from_dict） | ST-10 |
-| C-17.2/3, T-13 | SR-12 | 待回填（service.py） | ST-12 |
-| C-18.2/3, T-17 | SR-20 | 待回填（service.py admin） | ST-20 |
+| C-15.2 | SR-16 | auth_core/service.py:258, auth_core/storage.py:334, auth_core/models.py:101 | ST-16 |
+| C-16.1 | SR-17 | auth_core/models.py:86, auth_core/service.py:230 | ST-17 |
+| C-16.2, T-04 | SR-09 | auth_core/storage.py:95（全表参数化）, auth_core/models.py:51,62,68 | ST-09 |
+| C-16.2, C-07.2, T-12 | SR-10 | auth_core/models.py:94,251 | ST-10 |
+| C-17.2/3, T-13 | SR-12 | auth_core/service.py:177,495 | ST-12 |
+| C-18.2/3, T-17 | SR-20 | auth_core/service.py:586,601, 登录拦截 service.py:325 | ST-20 |
 | C-18.1/4, T-17 | SR-40 | 部署层/组织层 | ST-40（部署验收） |
-| T-08 | SR-19 | 待回填（errors.py / storage.py） | ST-19 |
+| T-08 | SR-19 | auth_core/errors.py:31,75, auth_core/storage.py:95 | ST-19 |
 | T-09（前端落地页） | SR-30 | 部署层 | ST-30（部署验收） |
 | T-20 | SR-31 | 部署层 | ST-31（部署验收） |
 | T-24 | SR-33 | 部署层（真实 Sender 实现时） | ST-33（部署验收） |
